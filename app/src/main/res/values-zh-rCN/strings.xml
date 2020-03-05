@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">心算挑战</string>
+    <string name="title_name">计算测试</string>
+    <string name="quit_dialog_msg">你确定要退出吗？</string>
+    <string name="question_msg">开始回答</string>
+    <string name="high_score">最高纪录 %d</string>
+    <string name="dialog_positive_msg">确定</string>
+    <string name="dialog_negative_msg">取消</string>
+    <string name="current_score">当前得分 %d</string>
+    <string name="challenge_success">挑战成功</string>
+    <string name="challenge_result">本次得分： %d</string>
+    <string name="challenge_lose">挑战失败</string>
+    <string name="button_submit">确定</string>
+    <string name="button_start">开始挑战</string>
+    <string name="button_clear">清除</string>
+    <string name="button_back">返回</string>
+    <string name="nav_title_home">开始</string>
+    <string name="nav_title_lose">失败</string>
+    <string name="nav_title_question">挑战</string>
+    <string name="nav_title_win">成功</string>
+</resources>

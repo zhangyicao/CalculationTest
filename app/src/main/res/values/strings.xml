@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">CalculationTest</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_name">Calculation Test</string>
+    <string name="button_start">Start</string>
+    <string name="title_img_msg" translatable="false">title image</string>
+    <string name="high_score">high score  %d</string>
+    <string name="current_score">current score  %d</string>
+    <string name="question_msg">start answer</string>
+    <string name="button0" translatable="false">0</string>
+    <string name="button1" translatable="false">1</string>
+    <string name="button2" translatable="false">2</string>
+    <string name="button3" translatable="false">3</string>
+    <string name="button4" translatable="false">4</string>
+    <string name="button5" translatable="false">5</string>
+    <string name="button6" translatable="false">6</string>
+    <string name="button7" translatable="false">7</string>
+    <string name="button8" translatable="false">8</string>
+    <string name="button9" translatable="false">9</string>
+    <string name="button_clear">CE</string>
+    <string name="button_submit">OK</string>
+    <string name="equal_symbol" translatable="false">=</string>
+    <string name="quest_symbol" translatable="false">\?</string>
+    <string name="challenge_lose">You Lose</string>
+    <string name="challenge_success">You Win</string>
+    <string name="challenge_result">Score：%d</string>
+    <string name="button_back">Back</string>
+    <string name="img_lose_msg" translatable="false">lose image</string>
+    <string name="img_win_msg" translatable="false">win image</string>
+    <string name="quit_dialog_msg">Are you sure to quit? </string>
+    <string name="dialog_positive_msg">Confirm</string>
+    <string name="dialog_negative_msg">Cancel </string>
+    <string name="nav_title_home">Home </string>
+    <string name="nav_title_question">Question </string>
+    <string name="nav_title_win">Win </string>
+    <string name="nav_title_lose">Lose </string>
+
+</resources>
