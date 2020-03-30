@@ -2,17 +2,16 @@ package com.yicao.calculationtest;
 
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateViewModelFactory;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.yicao.calculationtest.databinding.FragmentWinBinding;
 
@@ -32,7 +31,10 @@ public class WinFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final MyViewModel viewModel;
-        viewModel = ViewModelProviders.of(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),requireActivity())).get(MyViewModel.class);
+        viewModel = new ViewModelProvider(requireActivity(),
+                new SavedStateViewModelFactory(requireActivity().getApplication(), requireActivity()))
+                .get(MyViewModel.class);
+
         FragmentWinBinding binding;
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_win, container, false);
         binding.setData(viewModel);

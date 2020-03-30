@@ -20,7 +20,7 @@ public class MyViewModel extends AndroidViewModel {
     private static final String KEY_ANSWER = "key_answer";
     private static final String SAVE_SHP_DATA_NAME = "calculation";
     private static final String KEY_CURRENT_SCORE = "key_current_current";
-    boolean win_flag = false;
+    boolean win_flag;
 
     public MyViewModel(@NonNull Application application, SavedStateHandle handle) {
         super(application);
@@ -28,6 +28,7 @@ public class MyViewModel extends AndroidViewModel {
             SharedPreferences shp = getApplication().getSharedPreferences(SAVE_SHP_DATA_NAME, Context.MODE_PRIVATE);
             handle.set(KEY_HIGH_SCORE, shp.getInt(KEY_HIGH_SCORE, 0));
         }
+        win_flag = false;
         this.handle = handle;
     }
 

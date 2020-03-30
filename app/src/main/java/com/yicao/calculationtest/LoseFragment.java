@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateViewModelFactory;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -31,7 +31,10 @@ public class LoseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final MyViewModel viewModel;
-        viewModel = ViewModelProviders.of(requireActivity(), new SavedStateViewModelFactory(requireActivity().getApplication(), requireActivity())).get(MyViewModel.class);
+        viewModel = new ViewModelProvider(requireActivity(),
+                new SavedStateViewModelFactory(requireActivity().getApplication(), requireActivity()))
+                .get(MyViewModel.class);
+
         FragmentLoseBinding binding;
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_lose, container, false);
         binding.setData(viewModel);

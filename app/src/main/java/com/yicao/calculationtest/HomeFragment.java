@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateViewModelFactory;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -34,18 +34,16 @@ public class HomeFragment extends Fragment {
 //        return inflater.inflate(R.layout.fragment_home, container, false);
 
         final MyViewModel viewModel;
-//        viewModel = new ViewModelProvider(this,
-//                new SavedStateViewModelFactory(requireActivity().getApplication(), requireActivity()))
-//                .get(MyViewModel.class);
-
-        viewModel = ViewModelProviders.of(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),requireActivity())).get(MyViewModel.class);
+        viewModel = new ViewModelProvider(requireActivity(),
+                new SavedStateViewModelFactory(requireActivity().getApplication(), requireActivity()))
+                .get(MyViewModel.class);
 
         FragmentHomeBinding binding;
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
         binding.setData(viewModel);
         binding.setLifecycleOwner(requireActivity());
 
-        binding.button2.setOnClickListener(v->{
+        binding.button2.setOnClickListener(v -> {
             NavController controller = Navigation.findNavController(v);
             controller.navigate(R.id.action_honeFragment_to_questionFragment);
             viewModel.getCurrentScore().setValue(0);
