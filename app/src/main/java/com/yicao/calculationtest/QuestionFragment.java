@@ -67,7 +67,7 @@ public class QuestionFragment extends Fragment {
         });
 
         binding.buttonSubmit.setOnClickListener(v->{
-            //todo:此处数据可能溢出
+            //todo:此处数据可能溢
             if (sb.length() == 0) {
                 sb.append(-1);
             }
